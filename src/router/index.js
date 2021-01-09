@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Join from '../views/Join.vue'
 import Reset from '../views/Reset.vue'
+import Board from '../views/Board.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/reset',
     name: 'Reset',
     component: Reset
+  },
+  {
+    path: '/board',
+    name: 'Board',
+    component: Board
   }
   // {
   //   path: '/about',
