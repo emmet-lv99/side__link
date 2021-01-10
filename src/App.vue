@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div class="buttons">
-      <b-button type="is-primary">aa</b-button>
-    </div>
     <router-view/>
   </div>
 </template>
