@@ -6,4 +6,7 @@
 
 <style lang="scss">
 @import "./common.scss";
+html, body, #app {
+  height: 100%;
+}
 </style>
