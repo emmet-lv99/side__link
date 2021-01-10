@@ -15,6 +15,10 @@ $twitter-invert: findColorInvert($twitter);
 $custom-colors: null !default;
 $custom-shades: null !default;
 
+// inputs
+$input-background-color: #f7f7f7;
+$input-border-color: #dfdfdf;
+$input-shadow: none;
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: mergeColorMaps(
   (
@@ -78,7 +82,7 @@ $colors: mergeColorMaps(
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
-
+$input-radius: 8px;
 $--color--primary: #ff9fab;
 
 $--color-clear: rgba(255, 255, 255, 0) !default;
