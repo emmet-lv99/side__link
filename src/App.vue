@@ -8,5 +8,6 @@
 @import "./common.scss";
 html, body, #app {
   height: 100%;
+  font-size: 16px !important;
 }
 </style>
