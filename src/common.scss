@@ -151,6 +151,13 @@ $--font-bold: 700;
       top: 50%;
       transform: translateY(-50%);
     }
+    span.icon {
+      i {
+        &::before {
+          font-size: 1.2em !important;
+        }
+      }
+    }
   }
 }
 
