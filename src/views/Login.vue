@@ -21,7 +21,7 @@
           </div>
           <div class="buttons">
             <b-button type="is-primary" expanded>로그인</b-button>
-            <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
+            <b-button @click="$router.push('/join')" class="btn__join" type="is-primary" inverted>회원가입</b-button>
           </div>
         </div>
         <div class="content__extra-func">

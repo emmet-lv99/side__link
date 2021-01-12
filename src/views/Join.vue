@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="content__extra-func">
-          <span>이미 가입하셨나요?&nbsp;<a class="extra-func__btn" href="">로그인 바로가기</a></span>
+          <span>이미 가입하셨나요?&nbsp;<router-link  class="extra-func__btn" to="/login">로그인 바로가기</router-link></span>
         </div>
       </div>
     </div>
