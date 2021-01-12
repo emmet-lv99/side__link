@@ -16,16 +16,22 @@
               placeholder="닉네임을 입력해주세요">
             </b-input>
           </b-field>
-          <b-field label="비밀번호" class="form__pw">
-            <b-input type="password"
-              value="123">
-            </b-input>
-          </b-field>
-          <b-field class="form__pw">
-            <b-input type="password"
-              value="123">
-            </b-input>
-          </b-field>
+          <div class="form__pw">
+            <b-field label="비밀번호" class="form__pw--org">
+              <b-input type="password"
+                value="123"
+                password-reveal
+              >
+              </b-input>
+            </b-field>
+            <b-field class="form__pw--confirm">
+              <b-input type="password"
+                value="123"
+                password-reveal
+              >
+              </b-input>
+            </b-field>
+          </div>
           <div class="buttons">
             <b-button type="is-primary" expanded>로그인</b-button>
             <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
@@ -86,6 +92,7 @@ export default {
         }
         &__pw {
           margin-bottom: 40px;
+          &--org, &--confirm { margin-bottom: 10px}
         }
       }
       .buttons {
