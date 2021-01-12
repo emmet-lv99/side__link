@@ -1,32 +1,25 @@
 <template>
-  <div id="login">
-    <div class="wrapper">
-      <div class="content">
-        <h1 class="content__title">로그인</h1>
-        <div class="content__form">
-          <b-field label="아이디(이메일)" class="form__email">
-            <b-input type="email"
-              value=""
-              placeholder="아이디(이메일)을 입력해주세요">
-            </b-input>
-          </b-field>
-          <div class="form__pw">
-            <b-field label="비밀번호">
-              <b-input type="password"
-                value="123"
-                password-reveal
-              >
-              </b-input>
-            </b-field>
-          </div>
-          <div class="buttons">
-            <b-button type="is-primary" expanded>로그인</b-button>
-            <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
-          </div>
+  <div id="reset-request">
+    <div class="content">
+      <h1 class="content__title">비밀번호 재설정
+        <p class="title__desc">
+          아이디를 입력하시면, 가입시 등록하신 이메일로
+          비밀번호를 재설정할 수 있는 이메일을 보내드립니다.
+        </p>
+      </h1>
+      <div class="content__form">
+        <b-field label="아이디(이메일)" class="form__email">
+          <b-input type="email"
+            value=""
+            placeholder="아이디(이메일)을 입력해주세요">
+          </b-input>
+        </b-field>
+        <div class="buttons">
+          <b-button @click="resetPw" type="is-primary" expanded>비밀번호 재설정</b-button>
         </div>
-        <div class="content__extra-func">
-          <span>비밀번호를 잊으셨나요?&nbsp;<router-link  class="extra-func__btn" to="/reset">비밀번호 재설정</router-link></span>
-        </div>
+      </div>
+      <div class="content__extra-func">
+        <span>비밀번호가 생각나셨나요?&nbsp;<router-link  class="extra-func__btn" to="/login">로그인 바로가기</router-link></span>
       </div>
     </div>
   </div>
@@ -34,30 +27,25 @@
 
 <script>
 export default {
+  name: 'resetRequest',
+  methods: {
+    resetPw () {
+      this.$emit('sendPw')
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../common.scss";
-  #login {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: $--color-black-5;
-  }
-  .wrapper {
-    flex: 1; /* flex: 1 1 0 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-  }
+
   .content {
     width: 500px;
     border-radius: 24px;
     background: $--color-white;
     box-shadow: 6px 6px 30px rgba(0,0,0,.1);
+    border: 1px solid $--color-white;
+    box-sizing: border-box;
   }
   .content {
     position: relative;
@@ -70,19 +58,26 @@ export default {
         weight: $--font-bold !important;
       }
       color: $--color-wetgray-60 !important;
+      .title__desc {
+        margin-top: 15px;
+        line-height: 1.4;
+        padding: 0 40px;
+        word-break: keep-all;
+        font: {
+          size: 18px !important;
+          weight: $--font-regular;
+        }
+      }
     }
     &__form {
       padding: 0 50px;
       .form {
         &__email {
-          margin-bottom: 26px;
-        }
-        &__pw {
           margin-bottom: 40px;
         }
       }
       .buttons {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         justify-content: center;
         button {
           margin-bottom: 0px;
@@ -114,6 +109,9 @@ export default {
           color: $--color-primary-9;
         }
       }
+    }
+    .btn__join {
+      margin-bottom: 50px;
     }
   }
 </style>
