@@ -12,7 +12,9 @@
           </b-field>
           <b-field label="비밀번호"  class="form__pw">
             <b-input type="password"
-              value="123">
+              value="123"
+              password-reveal
+            >
             </b-input>
           </b-field>
           <div class="buttons">
