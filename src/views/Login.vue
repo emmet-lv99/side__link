@@ -22,8 +22,8 @@
             <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
           </div>
         </div>
-        <div class="content__find-pw">
-          <span>비밀번호를 잊으셨나요?&nbsp;<a class="find-pw__btn" href="">비밀번호 재설정</a></span>
+        <div class="content__extra-func">
+          <span>비밀번호를 잊으셨나요?&nbsp;<a class="extra-func__btn" href="">비밀번호 재설정</a></span>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@ export default {
         }
       }
     }
-    &__find-pw {
+    &__extra-func {
       width: 100%;
       position: absolute;
       left: 50%;
