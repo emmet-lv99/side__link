@@ -161,6 +161,17 @@ $--font-bold: 700;
   }
 }
 
+.form__pw {
+  span.icon {
+    i {
+      &::before {
+        font-size: 1.2em !important;
+        color: $--color-wetgray-30;
+      }
+    }
+  }
+}
+
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

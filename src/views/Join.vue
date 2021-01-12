@@ -32,9 +32,8 @@
               </b-input>
             </b-field>
           </div>
-          <div class="buttons">
-            <b-button type="is-primary" expanded>로그인</b-button>
-            <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
+          <div class="buttons btn__join">
+            <b-button type="is-primary" expanded>회원가입</b-button>
           </div>
         </div>
         <div class="content__extra-func">
@@ -128,6 +127,9 @@ export default {
           color: $--color-primary-9;
         }
       }
+    }
+    .btn__join {
+      margin-bottom: 50px;
     }
   }
 </style>

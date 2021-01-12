@@ -10,13 +10,15 @@
               placeholder="아이디(이메일)을 입력해주세요">
             </b-input>
           </b-field>
-          <b-field label="비밀번호"  class="form__pw">
-            <b-input type="password"
-              value="123"
-              password-reveal
-            >
-            </b-input>
-          </b-field>
+          <div class="form__pw">
+            <b-field label="비밀번호">
+              <b-input type="password"
+                value="123"
+                password-reveal
+              >
+              </b-input>
+            </b-field>
+          </div>
           <div class="buttons">
             <b-button type="is-primary" expanded>로그인</b-button>
             <b-button class="btn__join" type="is-primary" inverted>회원가입</b-button>
