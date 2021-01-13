@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="board">
     보드
     todo
     1. 네비게이션 컴포넌트 추가
@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: 'board'
 }
 </script>
 
