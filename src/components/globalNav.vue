@@ -3,9 +3,9 @@
     <div class="nav__wrapper">
       <div class="nav__content">
         <ul class="content__menu">
-          <li class="menu__item">링크보드</li>
-          <li class="menu__item">테마설정</li>
-          <li class="menu__item">인사이트</li>
+          <li class="menu__item" @click="selectMenu('links')">링크보드</li>
+          <li class="menu__item" @click="selectMenu('theme')">테마설정</li>
+          <li class="menu__item" @click="selectMenu('insight')">인사이트</li>
         </ul>
         <div class="content__user">
           <div class="user__content">
@@ -28,7 +28,33 @@
 
 <script>
 export default {
-  name: 'global-nav'
+  name: 'globalNav',
+  data () {
+    return {
+      isCurrentMenu: ''
+    }
+  },
+  created () {
+    this.isCurrentMenu = 'links'
+    if (this.$route.name === 'Board') {
+      this.selectMenu('links')
+    } else {
+      this.selectMenu(this.$route.name)
+    }
+  },
+  methods: {
+    selectMenu (page) {
+      if (page !== this.isCurrentMenu) {
+        this.isCurrentMenu = page
+        this.$emit('selected', this.isCurrentMenu)
+      }
+    }
+  },
+  watch: {
+    $route (to) {
+      this.isCurrentMenu = to.name
+    }
+  }
 }
 </script>
 

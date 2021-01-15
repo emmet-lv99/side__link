@@ -36,20 +36,20 @@ const routes = [
     path: '/p',
     name: 'Board',
     component: Board,
-    redirect: '/p/board',
+    redirect: '/p/links',
     children: [{
-      path: '/board',
-      name: 'linkBoard',
+      path: 'links',
+      name: 'links',
       component: linkBoard
     },
     {
-      path: '/setting',
-      name: 'themeSetting',
+      path: 'theme',
+      name: 'theme',
       component: themeSetting
     },
     {
-      path: '/insight',
-      name: 'userInsight',
+      path: 'insight',
+      name: 'insight',
       component: userInsight
     }]
   }

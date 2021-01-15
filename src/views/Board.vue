@@ -5,7 +5,7 @@ todo
 <template>
   <div id="board">
     <div class="wrapper">
-      <global-nav/>
+      <global-nav @selected="pageChange"/>
       <router-view/>
     </div>
   </div>
@@ -18,6 +18,11 @@ export default {
   name: 'board',
   components: {
     globalNav
+  },
+  methods: {
+    pageChange (page) {
+      this.$router.push('/p/' + page.toLowerCase())
+    }
   }
 }
 </script>
