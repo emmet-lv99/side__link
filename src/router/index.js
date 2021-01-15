@@ -5,6 +5,9 @@ import Login from '../views/Login.vue'
 import Join from '../views/Join.vue'
 import Reset from '../views/Reset.vue'
 import Board from '../views/Board.vue'
+import linkBoard from '../components/linkBoard.vue'
+import themeSetting from '../components/themeSetting.vue'
+import userInsight from '../components/userInsight.vue'
 
 Vue.use(VueRouter)
 
@@ -30,9 +33,25 @@ const routes = [
     component: Reset
   },
   {
-    path: '/board',
+    path: '/p',
     name: 'Board',
-    component: Board
+    component: Board,
+    redirect: '/p/board',
+    children: [{
+      path: '/board',
+      name: 'linkBoard',
+      component: linkBoard
+    },
+    {
+      path: '/setting',
+      name: 'themeSetting',
+      component: themeSetting
+    },
+    {
+      path: '/insight',
+      name: 'userInsight',
+      component: userInsight
+    }]
   }
   // {
   //   path: '/about',
