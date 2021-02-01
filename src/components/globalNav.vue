@@ -39,7 +39,7 @@ export default {
     if (this.$route.name === 'Board') {
       this.selectMenu('links')
     } else {
-      this.selectMenu(this.$route.name)
+      this.selectMenu(this.$route.name) // 이게 실행되도록 하는 것. this.$route.name 은 links다.
     }
   },
   methods: {
