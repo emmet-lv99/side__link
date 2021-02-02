@@ -31,15 +31,17 @@ export default {
     padding: 0 20px;
     max-width: 768px;
     width: 100%;
-    flex: 1;
+    flex: 1 0 400px;
     background-color: red;
     box-sizing: border-box;
   }
   &__preview {
-    max-width: 385px;
+    padding-left: 20px;
+    max-width: 405px;
     width: 100%;
-    flex: 1 1 375px;
+    flex: 1 0 320px;
     background-color: blue;
+    box-sizing: border-box;
   }
 }
 
