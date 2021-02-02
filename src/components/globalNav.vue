@@ -71,8 +71,10 @@ export default {
   }
   &__content {
     margin: 0 auto;
-    max-width: 1275px;
+    padding: 0 10px;
+    max-width: 1295px;
     height: 100%;
+    box-sizing: border-box;
     &::after {
       display: block;
       content: '';
