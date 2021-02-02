@@ -18,9 +18,9 @@ export default {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
   width: 100%;
-  max-width: 1295px;
+  max-width: 1315px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;

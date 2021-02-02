@@ -71,8 +71,8 @@ export default {
   }
   &__content {
     margin: 0 auto;
-    padding: 0 10px;
-    max-width: 1295px;
+    padding: 0 20px;
+    max-width: 1315px;
     height: 100%;
     box-sizing: border-box;
     &::after {
