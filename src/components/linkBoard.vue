@@ -30,7 +30,6 @@ export default {
   &__link {
     padding: 0 20px;
     max-width: 768px;
-    width: 100%;
     flex: 1 0 400px;
     background-color: red;
     box-sizing: border-box;
@@ -38,10 +37,17 @@ export default {
   &__preview {
     padding-left: 20px;
     max-width: 405px;
-    width: 100%;
     flex: 1 0 320px;
     background-color: blue;
     box-sizing: border-box;
+  }
+}
+
+@media  (max-width:768px) {
+  .wrapper {
+    &__preview {
+      display: none;
+    }
   }
 }
 
